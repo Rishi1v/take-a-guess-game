@@ -13,19 +13,23 @@ print("=" * 40)
 while True:
 
     # Difficulty Selection
+    easy = 10
+    medium = 7
+    hard = 5
     print("\nChoose Difficulty:")
-    print("1. Easy (10 attempts)")
-    print("2. Medium (7 attempts)")
-    print("3. Hard (5 attempts)")
+    print(f"1. Easy ({easy} attempts)")
+    print(f"2. Medium ({medium} attempts)")
+    print(f"3. Hard ({hard} attempts)")
 
     difficulty = input("Select difficulty (1/2/3): ")
 
     if difficulty == "1":
-        max_attempts = 10
+        max_attempts = easy
     elif difficulty == "2":
-        max_attempts = 7
+        max_attempts = medium
     else:
-        max_attempts = 5
+        print("⚠️ Invalid choice, defaulting to Hard mode.")
+        max_attempts = hard
 
     # Generate random secret number
     secret_number = random.randint(1, 100)
